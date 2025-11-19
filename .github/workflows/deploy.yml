@@ -7,8 +7,8 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  # Dynamically use repository name to avoid hardcoding
-  IMAGE_NAME: ghcr.io/${{ github.repository }}
+  # Use lowercase image name for Docker compatibility
+  IMAGE_NAME: ghcr.io/tonnywong1052/ui-prompt
 
 jobs:
   build-and-deploy:
