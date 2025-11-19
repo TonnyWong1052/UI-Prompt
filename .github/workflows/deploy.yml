@@ -1,0 +1,134 @@
+name: Build and Deploy to DigitalOcean
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:  # Allow manual trigger
+
+env:
+  REGISTRY: ghcr.io
+  # Dynamically use repository name to avoid hardcoding
+  IMAGE_NAME: ghcr.io/${{ github.repository }}
+
+jobs:
+  build-and-deploy:
+    name: Build Docker Image & Deploy to Server
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      # ============================================
+      # STEP 1: Checkout Repository
+      # ============================================
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ============================================
+      # STEP 2: Set up Docker Buildx
+      # ============================================
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # ============================================
+      # STEP 3: Login to GitHub Container Registry
+      # ============================================
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # ============================================
+      # STEP 4: Extract Docker Metadata
+      # ============================================
+      - name: Extract metadata (tags, labels)
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=sha,prefix=sha-
+
+      # ============================================
+      # STEP 5: Build and Push Docker Image
+      # ============================================
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          # Use GitHub Actions cache to speed up builds
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          # DigitalOcean typically uses amd64 architecture
+          platforms: linux/amd64
+
+      # ============================================
+      # STEP 6: Deploy to DigitalOcean Server
+      # ============================================
+      - name: Deploy to DigitalOcean via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: |
+            # ----------------------------------------
+            # 1. Login to GitHub Container Registry
+            #    (CRITICAL: Without this, Docker cannot pull private images)
+            # ----------------------------------------
+            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+            # ----------------------------------------
+            # 2. Verify SSH Connection
+            # ----------------------------------------
+            echo "✅ Login Successful! Connected to server:"
+            hostname -I
+            echo "----------------------------------------"
+
+            # ----------------------------------------
+            # 3. Pull Latest Docker Image
+            # ----------------------------------------
+            echo "📦 Pulling image: ${{ env.IMAGE_NAME }}:latest"
+            docker pull ${{ env.IMAGE_NAME }}:latest
+
+            # ----------------------------------------
+            # 4. Stop and Remove Old Container
+            # ----------------------------------------
+            echo "🛑 Stopping old container (if exists)..."
+            docker rm -f ui-prompt || true
+
+            # ----------------------------------------
+            # 5. Start New Container
+            #    Maps Server Port 80 -> Container Port 8080
+            # ----------------------------------------
+            echo "🚀 Starting new container..."
+            docker run -d \
+              --name ui-prompt \
+              --restart unless-stopped \
+              -p 80:8080 \
+              ${{ env.IMAGE_NAME }}:latest
+
+            # ----------------------------------------
+            # 6. Cleanup Old Images (Save Disk Space)
+            # ----------------------------------------
+            echo "🧹 Cleaning up old images..."
+            docker image prune -af --filter "until=24h" || true
+
+            # ----------------------------------------
+            # 7. Verify Deployment
+            # ----------------------------------------
+            echo "----------------------------------------"
+            echo "✅ Deployment completed successfully!"
+            echo "📊 Container Status:"
+            docker ps -f name=ui-prompt --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
+
+            echo "----------------------------------------"
+            echo "🌐 Your app should be available at:"
+            echo "   http://$(hostname -I | awk '{print $1}')"
