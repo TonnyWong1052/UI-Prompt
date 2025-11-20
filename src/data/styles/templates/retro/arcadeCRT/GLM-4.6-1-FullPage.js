@@ -12,7 +12,7 @@ export const GLM_4_6_1_FullPageHTML = `
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap');
-        
+
         :root {
             --neon-magenta: #ff00ff;
             --neon-cyan: #00ffff;
@@ -21,13 +21,13 @@ export const GLM_4_6_1_FullPageHTML = `
             --neon-orange: #ff6600;
             --bg-black: #0a0a0a;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             background-color: var(--bg-black);
             font-family: 'Rajdhani', sans-serif;
@@ -35,7 +35,7 @@ export const GLM_4_6_1_FullPageHTML = `
             overflow-x: hidden;
             position: relative;
         }
-        
+
         /* CRT Screen Effect */
         .crt::before {
             content: " ";
@@ -50,7 +50,7 @@ export const GLM_4_6_1_FullPageHTML = `
             background-size: 100% 2px, 3px 100%;
             pointer-events: none;
         }
-        
+
         .crt::after {
             content: " ";
             display: block;
@@ -65,7 +65,7 @@ export const GLM_4_6_1_FullPageHTML = `
             pointer-events: none;
             animation: flicker 0.15s infinite;
         }
-        
+
         @keyframes flicker {
             0% { opacity: 0.27861; }
             5% { opacity: 0.34769; }
@@ -89,10 +89,10 @@ export const GLM_4_6_1_FullPageHTML = `
             95% { opacity: 0.36108; }
             100% { opacity: 0.24387; }
         }
-        
+
         /* Neon Glow Effects */
         .neon-text {
-            text-shadow: 
+            text-shadow:
                 0 0 5px currentColor,
                 0 0 10px currentColor,
                 0 0 15px currentColor,
@@ -100,31 +100,31 @@ export const GLM_4_6_1_FullPageHTML = `
                 0 0 35px currentColor,
                 0 0 40px currentColor;
         }
-        
+
         .neon-border {
-            box-shadow: 
+            box-shadow:
                 0 0 5px currentColor,
                 0 0 10px currentColor,
                 0 0 15px currentColor,
                 inset 0 0 5px currentColor;
         }
-        
+
         .neon-magenta { color: var(--neon-magenta); }
         .neon-cyan { color: var(--neon-cyan); }
         .neon-yellow { color: var(--neon-yellow); }
         .neon-green { color: var(--neon-green); }
         .neon-orange { color: var(--neon-orange); }
-        
+
         /* Font Classes */
         .font-orbitron {
             font-family: 'Orbitron', sans-serif;
         }
-        
+
         /* RGB Split Effect */
         .rgb-split {
             position: relative;
         }
-        
+
         .rgb-split::before, .rgb-split::after {
             content: attr(data-text);
             position: absolute;
@@ -133,36 +133,36 @@ export const GLM_4_6_1_FullPageHTML = `
             width: 100%;
             height: 100%;
         }
-        
+
         .rgb-split::before {
             color: var(--neon-cyan);
             z-index: -1;
             animation: rgb-animation 3s infinite alternate-reverse;
         }
-        
+
         .rgb-split::after {
             color: var(--neon-magenta);
             z-index: -2;
             animation: rgb-animation 2s infinite alternate-reverse;
         }
-        
+
         @keyframes rgb-animation {
             0% { transform: translate(0); }
             100% { transform: translate(3px, 3px); }
         }
-        
+
         /* Arcade Cabinet Style */
         .arcade-cabinet {
             background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
             border: 4px solid #333;
             border-radius: 10px 10px 30px 30px;
-            box-shadow: 
+            box-shadow:
                 0 10px 20px rgba(0, 0, 0, 0.5),
                 inset 0 0 20px rgba(0, 0, 0, 0.8);
             position: relative;
             overflow: hidden;
         }
-        
+
         .arcade-cabinet::before {
             content: '';
             position: absolute;
@@ -173,7 +173,7 @@ export const GLM_4_6_1_FullPageHTML = `
             background: linear-gradient(90deg, #222, #444, #222);
             border-bottom: 2px solid #555;
         }
-        
+
         .arcade-cabinet::after {
             content: '';
             position: absolute;
@@ -185,7 +185,7 @@ export const GLM_4_6_1_FullPageHTML = `
             border-top: 2px solid #555;
             border-radius: 0 0 30px 30px;
         }
-        
+
         /* Game Card Styles */
         .game-card {
             background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
@@ -195,13 +195,13 @@ export const GLM_4_6_1_FullPageHTML = `
             transition: all 0.3s ease;
             position: relative;
         }
-        
+
         .game-card:hover {
             transform: translateY(-5px);
             border-color: var(--neon-cyan);
             box-shadow: 0 0 15px var(--neon-cyan);
         }
-        
+
         .game-card::before {
             content: '';
             position: absolute;
@@ -211,7 +211,7 @@ export const GLM_4_6_1_FullPageHTML = `
             height: 5px;
             background: linear-gradient(90deg, var(--neon-magenta), var(--neon-cyan), var(--neon-yellow), var(--neon-green), var(--neon-orange));
         }
-        
+
         /* Leaderboard Styles */
         .leaderboard-entry {
             display: flex;
@@ -222,16 +222,16 @@ export const GLM_4_6_1_FullPageHTML = `
             border-left: 3px solid transparent;
             transition: all 0.3s ease;
         }
-        
+
         .leaderboard-entry:hover {
             background: rgba(255, 255, 255, 0.1);
             border-left-color: var(--neon-yellow);
         }
-        
+
         .leaderboard-entry:nth-child(1) { border-left-color: var(--neon-yellow); }
         .leaderboard-entry:nth-child(2) { border-left-color: var(--neon-cyan); }
         .leaderboard-entry:nth-child(3) { border-left-color: var(--neon-orange); }
-        
+
         /* Button Styles */
         .arcade-btn {
             background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
@@ -247,7 +247,7 @@ export const GLM_4_6_1_FullPageHTML = `
             transition: all 0.3s ease;
             z-index: 1;
         }
-        
+
         .arcade-btn::before {
             content: '';
             position: absolute;
@@ -259,23 +259,23 @@ export const GLM_4_6_1_FullPageHTML = `
             transition: all 0.5s ease;
             z-index: -1;
         }
-        
+
         .arcade-btn:hover::before {
             left: 0;
         }
-        
+
         .arcade-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
         }
-        
+
         /* Navigation Styles */
         .nav-link {
             position: relative;
             padding: 5px 10px;
             transition: all 0.3s ease;
         }
-        
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -286,18 +286,18 @@ export const GLM_4_6_1_FullPageHTML = `
             background: currentColor;
             transition: width 0.3s ease;
         }
-        
+
         .nav-link:hover::after {
             width: 100%;
         }
-        
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .rgb-split::before, .rgb-split::after {
                 display: none;
             }
         }
-        
+
         /* Ripple Effect */
         .ripple {
             position: absolute;
@@ -307,7 +307,7 @@ export const GLM_4_6_1_FullPageHTML = `
             animation: ripple-animation 0.6s linear;
             pointer-events: none;
         }
-        
+
         @keyframes ripple-animation {
             to {
                 transform: scale(4);
@@ -324,7 +324,7 @@ export const GLM_4_6_1_FullPageHTML = `
                 <i class="fas fa-gamepad text-2xl neon-cyan"></i>
                 <span class="text-xl font-bold font-orbitron neon-cyan">ARCADE CRT</span>
             </div>
-            
+
             <div class="hidden md:flex space-x-6">
                 <a href="#home" class="nav-link neon-magenta">HOME</a>
                 <a href="#games" class="nav-link neon-cyan">GAMES</a>
@@ -332,7 +332,7 @@ export const GLM_4_6_1_FullPageHTML = `
                 <a href="#gallery" class="nav-link neon-green">GALLERY</a>
                 <a href="#contact" class="nav-link neon-orange">CONTACT</a>
             </div>
-            
+
             <div class="flex items-center space-x-4">
                 <div class="flex items-center space-x-1 bg-gray-900 px-3 py-1 rounded-full">
                     <i class="fas fa-coins text-yellow-400"></i>
@@ -354,13 +354,13 @@ export const GLM_4_6_1_FullPageHTML = `
             <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto neon-green">
                 Step back in time to the golden age of arcade gaming with authentic CRT effects and neon aesthetics
             </p>
-            
+
             <div class="flex flex-wrap justify-center gap-4 mb-16">
                 <button class="arcade-btn neon-border neon-cyan">PLAY NOW</button>
                 <button class="arcade-btn neon-border neon-magenta">VIEW GAMES</button>
                 <button class="arcade-btn neon-border neon-yellow">HIGH SCORES</button>
             </div>
-            
+
             <div class="arcade-cabinet max-w-4xl mx-auto p-8">
                 <div class="bg-black p-6 rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -391,7 +391,7 @@ export const GLM_4_6_1_FullPageHTML = `
             <h2 class="text-4xl font-bold text-center mb-16 font-orbitron">
                 <span class="neon-magenta neon-text">FEATURED GAMES</span>
             </h2>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Game Card 1 -->
                 <div class="game-card">
@@ -407,7 +407,7 @@ export const GLM_4_6_1_FullPageHTML = `
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Game Card 2 -->
                 <div class="game-card">
                     <div class="h-48 bg-gradient-to-br from-yellow-900 to-orange-900 flex items-center justify-center">
@@ -422,7 +422,7 @@ export const GLM_4_6_1_FullPageHTML = `
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Game Card 3 -->
                 <div class="game-card">
                     <div class="h-48 bg-gradient-to-br from-green-900 to-teal-900 flex items-center justify-center">
@@ -437,7 +437,7 @@ export const GLM_4_6_1_FullPageHTML = `
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Game Card 4 -->
                 <div class="game-card">
                     <div class="h-48 bg-gradient-to-br from-red-900 to-pink-900 flex items-center justify-center">
@@ -452,7 +452,7 @@ export const GLM_4_6_1_FullPageHTML = `
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Game Card 5 -->
                 <div class="game-card">
                     <div class="h-48 bg-gradient-to-br from-blue-900 to-indigo-900 flex items-center justify-center">
@@ -467,7 +467,7 @@ export const GLM_4_6_1_FullPageHTML = `
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Game Card 6 -->
                 <div class="game-card">
                     <div class="h-48 bg-gradient-to-br from-orange-900 to-red-900 flex items-center justify-center">
@@ -492,7 +492,7 @@ export const GLM_4_6_1_FullPageHTML = `
             <h2 class="text-4xl font-bold text-center mb-16 font-orbitron">
                 <span class="neon-yellow neon-text">HALL OF FAME</span>
             </h2>
-            
+
             <div class="max-w-3xl mx-auto arcade-cabinet p-8">
                 <div class="bg-black p-6 rounded-lg">
                     <div class="flex justify-between items-center mb-6">
@@ -502,7 +502,7 @@ export const GLM_4_6_1_FullPageHTML = `
                             <button class="arcade-btn neon-border neon-magenta text-sm">ALL TIME</button>
                         </div>
                     </div>
-                    
+
                     <div class="space-y-2">
                         <div class="leaderboard-entry">
                             <div class="flex items-center space-x-4">
@@ -514,7 +514,7 @@ export const GLM_4_6_1_FullPageHTML = `
                             </div>
                             <span class="text-xl font-bold neon-yellow">45,230</span>
                         </div>
-                        
+
                         <div class="leaderboard-entry">
                             <div class="flex items-center space-x-4">
                                 <span class="text-2xl font-bold neon-cyan">2</span>
@@ -525,7 +525,7 @@ export const GLM_4_6_1_FullPageHTML = `
                             </div>
                             <span class="text-xl font-bold neon-cyan">63,420</span>
                         </div>
-                        
+
                         <div class="leaderboard-entry">
                             <div class="flex items-center space-x-4">
                                 <span class="text-2xl font-bold neon-orange">3</span>
@@ -536,7 +536,7 @@ export const GLM_4_6_1_FullPageHTML = `
                             </div>
                             <span class="text-xl font-bold neon-orange">58,760</span>
                         </div>
-                        
+
                         <div class="leaderboard-entry">
                             <div class="flex items-center space-x-4">
                                 <span class="text-2xl font-bold">4</span>
@@ -547,7 +547,7 @@ export const GLM_4_6_1_FullPageHTML = `
                             </div>
                             <span class="text-xl font-bold">41,890</span>
                         </div>
-                        
+
                         <div class="leaderboard-entry">
                             <div class="flex items-center space-x-4">
                                 <span class="text-2xl font-bold">5</span>
@@ -559,7 +559,7 @@ export const GLM_4_6_1_FullPageHTML = `
                             <span class="text-xl font-bold">32,150</span>
                         </div>
                     </div>
-                    
+
                     <div class="mt-8 text-center">
                         <button class="arcade-btn neon-border neon-green">VIEW FULL LEADERBOARD</button>
                     </div>
@@ -574,7 +574,7 @@ export const GLM_4_6_1_FullPageHTML = `
             <h2 class="text-4xl font-bold text-center mb-16 font-orbitron">
                 <span class="neon-green neon-text">ARCADE GALLERY</span>
             </h2>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div class="relative overflow-hidden rounded-lg group">
                     <img src="https://picsum.photos/seed/arcade1/400/300.jpg" alt="Arcade Cabinet" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
@@ -583,7 +583,7 @@ export const GLM_4_6_1_FullPageHTML = `
                         <h3 class="text-xl font-bold neon-cyan">Classic Cabinets</h3>
                     </div>
                 </div>
-                
+
                 <div class="relative overflow-hidden rounded-lg group">
                     <img src="https://picsum.photos/seed/arcade2/400/300.jpg" alt="Gaming Setup" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
@@ -591,7 +591,7 @@ export const GLM_4_6_1_FullPageHTML = `
                         <h3 class="text-xl font-bold neon-magenta">Gaming Setup</h3>
                     </div>
                 </div>
-                
+
                 <div class="relative overflow-hidden rounded-lg group">
                     <img src="https://picsum.photos/seed/arcade3/400/300.jpg" alt="Retro Gaming" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
@@ -599,7 +599,7 @@ export const GLM_4_6_1_FullPageHTML = `
                         <h3 class="text-xl font-bold neon-yellow">Retro Gaming</h3>
                     </div>
                 </div>
-                
+
                 <div class="relative overflow-hidden rounded-lg group">
                     <img src="https://picsum.photos/seed/arcade4/400/300.jpg" alt="Neon Lights" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
@@ -607,7 +607,7 @@ export const GLM_4_6_1_FullPageHTML = `
                         <h3 class="text-xl font-bold neon-green">Neon Lights</h3>
                     </div>
                 </div>
-                
+
                 <div class="relative overflow-hidden rounded-lg group">
                     <img src="https://picsum.photos/seed/arcade5/400/300.jpg" alt="Game Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
@@ -615,7 +615,7 @@ export const GLM_4_6_1_FullPageHTML = `
                         <h3 class="text-xl font-bold neon-orange">Game Room</h3>
                     </div>
                 </div>
-                
+
                 <div class="relative overflow-hidden rounded-lg group">
                     <img src="https://picsum.photos/seed/arcade6/400/300.jpg" alt="Joystick" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
@@ -623,7 +623,7 @@ export const GLM_4_6_1_FullPageHTML = `
                         <h3 class="text-xl font-bold neon-cyan">Joystick</h3>
                     </div>
                 </div>
-                
+
                 <div class="relative overflow-hidden rounded-lg group">
                     <img src="https://picsum.photos/seed/arcade7/400/300.jpg" alt="Pixel Art" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
@@ -631,7 +631,7 @@ export const GLM_4_6_1_FullPageHTML = `
                         <h3 class="text-xl font-bold neon-magenta">Pixel Art</h3>
                     </div>
                 </div>
-                
+
                 <div class="relative overflow-hidden rounded-lg group">
                     <img src="https://picsum.photos/seed/arcade8/400/300.jpg" alt="High Score" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
@@ -654,7 +654,7 @@ export const GLM_4_6_1_FullPageHTML = `
                     </div>
                     <p class="text-gray-400">Relive the golden age of arcade gaming with authentic CRT effects and classic games.</p>
                 </div>
-                
+
                 <div>
                     <h3 class="text-lg font-bold mb-4 neon-magenta">QUICK LINKS</h3>
                     <ul class="space-y-2">
@@ -664,29 +664,29 @@ export const GLM_4_6_1_FullPageHTML = `
                         <li><a href="#gallery" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="text-lg font-bold mb-4 neon-yellow">POPULAR GAMES</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Space Invaders</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Pac-Man</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Galaga</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Donkey Kong</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-colors">Space Invaders</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-colors">Pac-Man</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-colors">Galaga</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-colors">Donkey Kong</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="text-lg font-bold mb-4 neon-green">CONNECT WITH US</h3>
                     <div class="flex space-x-4 mb-4">
-                        <a href="#" class="text-gray-400 hover:text-neon-cyan transition-colors"><i class="fab fa-facebook text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-neon-cyan transition-colors"><i class="fab fa-twitter text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-neon-cyan transition-colors"><i class="fab fa-instagram text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-neon-cyan transition-colors"><i class="fab fa-youtube text-xl"></i></a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-neon-cyan transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-neon-cyan transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-neon-cyan transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-neon-cyan transition-colors"><i class="fab fa-youtube text-xl"></i></a>
                     </div>
                     <p class="text-gray-400">Subscribe to our newsletter for updates on new games and events.</p>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
                 <p>&copy; 2023 Arcade CRT. All rights reserved. Designed with nostalgia in mind.</p>
             </div>
@@ -708,7 +708,7 @@ export const GLM_4_6_1_FullPageHTML = `
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-link');
-            
+
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
@@ -732,7 +732,7 @@ export const GLM_4_6_1_FullPageHTML = `
             const currentCoins = parseInt(coinElement.querySelector('span').textContent);
             const newCoins = currentCoins + Math.floor(Math.random() * 5);
             coinElement.querySelector('span').textContent = newCoins;
-            
+
             // Add animation class
             coinElement.classList.add('animate-pulse');
             setTimeout(() => {
@@ -749,18 +749,18 @@ export const GLM_4_6_1_FullPageHTML = `
                 const size = Math.max(rect.width, rect.height);
                 const x = event.clientX - rect.left - size / 2;
                 const y = event.clientY - rect.top - size / 2;
-                
+
                 ripple.style.width = ripple.style.height = size + 'px';
                 ripple.style.left = x + 'px';
                 ripple.style.top = y + 'px';
                 ripple.classList.add('ripple');
-                
+
                 this.appendChild(ripple);
-                
+
                 setTimeout(() => {
                     ripple.remove();
                 }, 600);
-                
+
             });
         });
     </script>
@@ -850,7 +850,7 @@ body {
 
 /* Neon Glow Effects */
 .neon-text {
-    text-shadow: 
+    text-shadow:
         0 0 5px currentColor,
         0 0 10px currentColor,
         0 0 15px currentColor,
@@ -860,7 +860,7 @@ body {
 }
 
 .neon-border {
-    box-shadow: 
+    box-shadow:
         0 0 5px currentColor,
         0 0 10px currentColor,
         0 0 15px currentColor,
@@ -914,7 +914,7 @@ body {
     background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
     border: 4px solid #333;
     border-radius: 10px 10px 30px 30px;
-    box-shadow: 
+    box-shadow:
         0 10px 20px rgba(0, 0, 0, 0.5),
         inset 0 0 20px rgba(0, 0, 0, 0.8);
     position: relative;

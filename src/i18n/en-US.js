@@ -1449,6 +1449,26 @@ export default {
           "description": "Complete creative studio portfolio website showcasing claymorphism's dual shadows and pink-purple gradient design."
         }
       },
+      "glassmorphism2": {
+        "title": "Glassmorphism 2.0",
+        "description": "Glassmorphism 2.0 is an enhanced version of glass design, suitable for modern web applications and design portfolios. Through stronger background blur effects, multi-layer translucent overlays, and refined border decorations, it creates more depth and fashionable glass texture, delivering avant-garde and sophisticated visual experience."
+      },
+      "claymorphism": {
+        "title": "Claymorphism",
+        "description": "Claymorphism is a 3D clay texture design style, suitable for creative design, illustration style, and children's products. Through multi-layer inner and outer shadows, soft color gradients, and rounded shapes, it creates realistic clay-like tactile feel and soft texture, delivering warm, friendly, and tangible atmosphere."
+      },
+      "neumorphismDark": {
+        "title": "Neumorphism Dark",
+        "description": "Neumorphism Dark is the dark version of neomorphism design, suitable for modern dark theme applications and night mode interfaces. Using soft shadows and highlights on dark backgrounds to create subtle depth, combined with purple accent color, it delivers elegant, modern, and understated atmosphere."
+      },
+      "industrial": {
+        "title": "Industrial Design",
+        "description": "Industrial Design style is suitable for technical products, backend management systems, and professional tools. Emphasizing functionality and utilitarian aesthetics, using dark tones, bold uppercase typography, grid textures, and metallic feel, it delivers sturdy, reliable, and professional industrial atmosphere."
+      },
+      "biophilic": {
+        "title": "Biophilic Design",
+        "description": "Biophilic Design style is suitable for health, environmental, and lifestyle applications. Integrating natural elements into digital interfaces, using green tones, organic shapes, flowing curves, and natural textures, it delivers harmonious, peaceful atmosphere with connection to nature."
+      },
       "natural": {
         "title": "Natural",
         "description": "Natural and organic design inspired by nature with earthy tones and textures.",

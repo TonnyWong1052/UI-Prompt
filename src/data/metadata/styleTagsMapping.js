@@ -156,7 +156,39 @@ export const styleEnhancements = {
     primaryCategory: 'visual',
     categories: ['visual', 'retro'],
     tags: ['retro', 'colorful', 'translucent', 'futuristic', 'creative'],
-    relatedStyles: ['terminal-cli', 'visual-translucent-glassMorphism']
+    relatedStyles: ['terminal-cli', 'visual-translucent-glassmorphism']
+  },
+
+  // New Styles 2025
+  'visual-glassmorphism-2': {
+    primaryCategory: 'visual',
+    categories: ['visual', 'modern'],
+    tags: ['contemporary', 'translucent', 'depth', 'gradient', 'creative', 'modern'],
+    relatedStyles: ['visual-translucent-glassmorphism', 'core-fluent2', 'visual-y2k']
+  },
+  'visual-claymorphism': {
+    primaryCategory: 'visual',
+    categories: ['visual', 'modern'],
+    tags: ['contemporary', 'depth', 'soft', 'colorful', 'playful', 'creative'],
+    relatedStyles: ['visual-soft-ui', 'visual-paperCutout', 'visual-kawaii-minimal']
+  },
+  'visual-neumorphism-dark': {
+    primaryCategory: 'visual',
+    categories: ['visual', 'modern'],
+    tags: ['contemporary', 'depth', 'soft', 'minimal', 'dark', 'elegant'],
+    relatedStyles: ['visual-soft-ui', 'core-minimalism', 'visual-monochrome']
+  },
+  'visual-industrial': {
+    primaryCategory: 'visual',
+    categories: ['visual', 'modern'],
+    tags: ['contemporary', 'bold', 'minimal', 'utilitarian', 'enterprise', 'technical'],
+    relatedStyles: ['visual-monochrome', 'core-minimalism', 'visual-outlineStyle-business']
+  },
+  'visual-biophilic': {
+    primaryCategory: 'visual',
+    categories: ['visual', 'nature'],
+    tags: ['contemporary', 'organic', 'colorful', 'natural', 'harmonious', 'creative'],
+    relatedStyles: ['visual-nature-solarpunk', 'visual-nature-liquid', 'natural']
   },
 
   // Scroll Narrative (NEW - replaces parallaxScrolling)
@@ -345,12 +377,6 @@ export const styleEnhancements = {
   },
 
   // Nature 系列
-  'visual-nature-solarpunk': {
-    primaryCategory: 'visual',
-    categories: ['visual', 'nature'],
-    tags: ['contemporary', 'organic', 'colorful', 'creative', 'animated'],
-    relatedStyles: ['visual-nature-liquid']
-  },
   'visual-nature-smoke': {
     primaryCategory: 'visual',
     categories: ['visual', 'nature'],
@@ -394,12 +420,6 @@ export const styleEnhancements = {
     categories: ['visual', 'retro'],
     tags: ['retro', 'neon', 'minimal', 'dramatic', 'creative'],
     relatedStyles: ['visual-neon-cyberpunk', 'visual-liminalSpace', 'visual-y2k']
-  },
-  'visual-y2k': {
-    primaryCategory: 'visual',
-    categories: ['visual', 'retro'],
-    tags: ['retro', 'colorful', 'translucent', 'futuristic', 'creative'],
-    relatedStyles: ['terminal-cli', 'visual-translucent-glassmorphism']
   },
   'visual-soft-ui': {
     primaryCategory: 'visual',

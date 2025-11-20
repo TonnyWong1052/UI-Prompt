@@ -392,8 +392,8 @@ export const navigationComponents = [
             <div class="tabs-min-panel py-6">
               <h3 class="text-lg font-semibold text-gray-900 mb-3">Project Overview</h3>
               <p class="text-sm text-gray-600 leading-relaxed mb-4">
-                This project aims to revolutionize the way teams collaborate on design systems. 
-                Our platform provides a unified workspace for designers and developers to create, 
+                This project aims to revolutionize the way teams collaborate on design systems.
+                Our platform provides a unified workspace for designers and developers to create,
                 maintain, and evolve their design language.
               </p>
               <div class="flex gap-4">
@@ -484,7 +484,7 @@ export const navigationComponents = [
                 System Overview
               </h3>
               <p class="text-sm text-gray-300 leading-relaxed mb-4">
-                Real-time monitoring dashboard displaying critical system metrics and performance indicators. 
+                Real-time monitoring dashboard displaying critical system metrics and performance indicators.
                 All systems operational and running at peak efficiency.
               </p>
               <div class="grid grid-cols-3 gap-3">
@@ -609,7 +609,7 @@ export const navigationComponents = [
                   Project Overview
                 </h3>
                 <p class="text-sm text-gray-600 leading-relaxed mb-4">
-                  Welcome to your project dashboard. Here you can monitor progress, 
+                  Welcome to your project dashboard. Here you can monitor progress,
                   track team activities, and manage all aspects of your workflow in one place.
                 </p>
                 <div class="grid grid-cols-3 gap-4">
@@ -730,7 +730,7 @@ export const navigationComponents = [
                   Dashboard Overview
                 </h3>
                 <p class="text-sm text-purple-800 leading-relaxed mb-4">
-                  Experience the future of project management with our intuitive glassmorphic interface. 
+                  Experience the future of project management with our intuitive glassmorphic interface.
                   Beautiful design meets powerful functionality.
                 </p>
                 <div class="grid grid-cols-3 gap-3">
@@ -870,7 +870,7 @@ export const navigationComponents = [
                 Project Dashboard
               </h3>
               <p class="text-sm font-bold text-black leading-tight mb-4">
-                BOLD. VIBRANT. UNAPOLOGETIC. This is where creativity meets brutalist design philosophy. 
+                BOLD. VIBRANT. UNAPOLOGETIC. This is where creativity meets brutalist design philosophy.
                 No compromise. Pure functionality with maximum visual impact.
               </p>
               <div class="grid grid-cols-3 gap-4">

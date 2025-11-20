@@ -12,7 +12,7 @@ export const GLM_4_6_2_FullPageHTML = `
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
-        
+
         :root {
             --bg-black: #0a0a0a;
             --neon-magenta: #ff00ff;
@@ -21,20 +21,20 @@ export const GLM_4_6_2_FullPageHTML = `
             --neon-green: #00ff41;
             --neon-red: #ff0040;
         }
-        
+
         body {
             font-family: 'Orbitron', monospace;
             background-color: var(--bg-black);
             color: var(--neon-cyan);
             overflow-x: hidden;
         }
-        
+
         /* CRT Effect */
         .crt-container {
             position: relative;
             overflow: hidden;
         }
-        
+
         .crt-container::before {
             content: " ";
             display: block;
@@ -48,7 +48,7 @@ export const GLM_4_6_2_FullPageHTML = `
             background-size: 100% 2px, 3px 100%;
             pointer-events: none;
         }
-        
+
         .crt-container::after {
             content: " ";
             display: block;
@@ -63,7 +63,7 @@ export const GLM_4_6_2_FullPageHTML = `
             pointer-events: none;
             animation: flicker 0.15s infinite;
         }
-        
+
         @keyframes flicker {
             0% { opacity: 0.27861; }
             5% { opacity: 0.34769; }
@@ -87,78 +87,78 @@ export const GLM_4_6_2_FullPageHTML = `
             95% { opacity: 0.36108; }
             100% { opacity: 0.24387; }
         }
-        
+
         /* Neon Glow Effect */
         .neon-glow {
             text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
         }
-        
+
         .neon-border {
             box-shadow: 0 0 5px var(--neon-cyan), 0 0 10px var(--neon-cyan), inset 0 0 5px var(--neon-cyan);
         }
-        
+
         .neon-border-magenta {
             box-shadow: 0 0 5px var(--neon-magenta), 0 0 10px var(--neon-magenta), inset 0 0 5px var(--neon-magenta);
         }
-        
+
         .neon-border-yellow {
             box-shadow: 0 0 5px var(--neon-yellow), 0 0 10px var(--neon-yellow), inset 0 0 5px var(--neon-yellow);
         }
-        
+
         .neon-border-green {
             box-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green), inset 0 0 5px var(--neon-green);
         }
-        
+
         .neon-border-red {
             box-shadow: 0 0 5px var(--neon-red), 0 0 10px var(--neon-red), inset 0 0 5px var(--neon-red);
         }
-        
+
         /* Loading Animation */
         .loading-dots span {
             animation: blink 1.4s infinite both;
         }
-        
+
         .loading-dots span:nth-child(2) {
             animation-delay: 0.2s;
         }
-        
+
         .loading-dots span:nth-child(3) {
             animation-delay: 0.4s;
         }
-        
+
         @keyframes blink {
             0%, 60%, 100% { opacity: 0.2; }
             20% { opacity: 1; }
         }
-        
+
         /* Progress Bar Animation */
         .progress-bar {
             background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
             animation: progress-animation 3s ease-in-out infinite;
         }
-        
+
         @keyframes progress-animation {
             0% { width: 0%; }
             50% { width: 75%; }
             100% { width: 100%; }
         }
-        
+
         /* Notification Animation */
         .notification {
             animation: slide-in 0.5s ease-out;
         }
-        
+
         @keyframes slide-in {
             from { transform: translateX(100%); }
             to { transform: translateX(0); }
         }
-        
+
         /* Timeline Animation */
         .timeline-item {
             position: relative;
             padding-left: 40px;
         }
-        
+
         .timeline-item::before {
             content: '';
             position: absolute;
@@ -168,7 +168,7 @@ export const GLM_4_6_2_FullPageHTML = `
             width: 2px;
             background: var(--neon-cyan);
         }
-        
+
         .timeline-dot {
             position: absolute;
             left: 0;
@@ -179,19 +179,19 @@ export const GLM_4_6_2_FullPageHTML = `
             background: var(--bg-black);
             border: 2px solid var(--neon-cyan);
         }
-        
+
         /* Data Table Hover Effect */
         .data-table tr:hover {
             background-color: rgba(0, 255, 255, 0.1);
         }
-        
+
         /* Button Effects */
         .btn-arcade {
             position: relative;
             overflow: hidden;
             transition: all 0.3s;
         }
-        
+
         .btn-arcade::before {
             content: '';
             position: absolute;
@@ -202,39 +202,39 @@ export const GLM_4_6_2_FullPageHTML = `
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: left 0.5s;
         }
-        
+
         .btn-arcade:hover::before {
             left: 100%;
         }
-        
+
         /* Form Input Effects */
         .form-input {
             background-color: rgba(10, 10, 10, 0.7);
             border: 1px solid var(--neon-cyan);
             transition: all 0.3s;
         }
-        
+
         .form-input:focus {
             box-shadow: 0 0 10px var(--neon-cyan);
             outline: none;
         }
-        
+
         /* Card Hover Effect */
         .arcade-card {
             transition: all 0.3s;
         }
-        
+
         .arcade-card:hover {
             transform: translateY(-5px);
         }
-        
+
         /* Chart Container */
         .chart-container {
             position: relative;
             height: 200px;
             width: 100%;
         }
-        
+
         .chart-bar {
             position: absolute;
             bottom: 0;
@@ -417,7 +417,7 @@ export const GLM_4_6_2_FullPageHTML = `
                         <span class="text-xs text-cyan-300">Q1 2023</span>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item mb-8">
                     <div class="timeline-dot"></div>
                     <div class="bg-black bg-opacity-70 border border-magenta-500 rounded-lg p-6 neon-border-magenta">
@@ -426,7 +426,7 @@ export const GLM_4_6_2_FullPageHTML = `
                         <span class="text-xs text-magenta-300">Q2 2023</span>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item mb-8">
                     <div class="timeline-dot"></div>
                     <div class="bg-black bg-opacity-70 border border-yellow-400 rounded-lg p-6 neon-border-yellow">
@@ -435,7 +435,7 @@ export const GLM_4_6_2_FullPageHTML = `
                         <span class="text-xs text-yellow-300">Q3 2023</span>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="bg-black bg-opacity-70 border border-green-400 rounded-lg p-6 neon-border-green">
@@ -458,12 +458,12 @@ export const GLM_4_6_2_FullPageHTML = `
                         <label for="username" class="block text-cyan-400 mb-2">USERNAME</label>
                         <input type="text" id="username" name="username" class="form-input w-full px-4 py-2 rounded text-cyan-300" placeholder="Enter your username">
                     </div>
-                    
+
                     <div>
                         <label for="email" class="block text-cyan-400 mb-2">EMAIL ADDRESS</label>
                         <input type="email" id="email" name="email" class="form-input w-full px-4 py-2 rounded text-cyan-300" placeholder="your.email@example.com">
                     </div>
-                    
+
                     <div>
                         <label for="system" class="block text-cyan-400 mb-2">SYSTEM PREFERENCE</label>
                         <select id="system" name="system" class="form-input w-full px-4 py-2 rounded text-cyan-300 bg-black">
@@ -474,17 +474,17 @@ export const GLM_4_6_2_FullPageHTML = `
                             <option value="mobile">Mobile Device</option>
                         </select>
                     </div>
-                    
+
                     <div>
                         <label for="message" class="block text-cyan-400 mb-2">MESSAGE</label>
                         <textarea id="message" name="message" rows="4" class="form-input w-full px-4 py-2 rounded text-cyan-300" placeholder="Enter your message here..."></textarea>
                     </div>
-                    
+
                     <div class="flex items-center">
                         <input type="checkbox" id="subscribe" name="subscribe" class="mr-2">
                         <label for="subscribe" class="text-cyan-300">Subscribe to system updates</label>
                     </div>
-                    
+
                     <div class="flex space-x-4">
                         <button type="submit" class="btn-arcade flex-1 px-6 py-3 bg-transparent border-2 border-cyan-400 text-cyan-400 rounded font-bold hover:bg-cyan-400 hover:text-black transition-all neon-border">
                             <i class="fas fa-paper-plane mr-2"></i>TRANSMIT
@@ -507,13 +507,13 @@ export const GLM_4_6_2_FullPageHTML = `
                     <span class="text-cyan-400 font-bold">ARCADE CRT INTERFACE</span>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="#" class="text-cyan-400 hover:text-magenta-400 transition-colors">
+                    <a href="javascript:void(0)" class="text-cyan-400 hover:text-magenta-400 transition-colors">
                         <i class="fab fa-github text-xl"></i>
                     </a>
-                    <a href="#" class="text-cyan-400 hover:text-magenta-400 transition-colors">
+                    <a href="javascript:void(0)" class="text-cyan-400 hover:text-magenta-400 transition-colors">
                         <i class="fab fa-twitter text-xl"></i>
                     </a>
-                    <a href="#" class="text-cyan-400 hover:text-magenta-400 transition-colors">
+                    <a href="javascript:void(0)" class="text-cyan-400 hover:text-magenta-400 transition-colors">
                         <i class="fab fa-discord text-xl"></i>
                     </a>
                 </div>
@@ -565,7 +565,7 @@ export const GLM_4_6_2_FullPageHTML = `
         document.getElementById('notification-btn').addEventListener('click', function() {
             const notification = document.getElementById('notification');
             notification.classList.remove('hidden');
-            
+
             // Auto-hide after 5 seconds
             setTimeout(() => {
                 notification.classList.add('hidden');
@@ -579,20 +579,20 @@ export const GLM_4_6_2_FullPageHTML = `
         // Form submission
         document.getElementById('arcade-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // Create success notification
             const notification = document.getElementById('notification');
             const notificationContent = notification.querySelector('p');
             notificationContent.textContent = 'Form submitted successfully! Data transmitted to system.';
-            
+
             // Show notification
             notification.classList.remove('hidden');
-            
+
             // Auto-hide after 5 seconds
             setTimeout(() => {
                 notification.classList.add('hidden');
             }, 5000);
-            
+
             // Reset form
             this.reset();
         });
@@ -639,7 +639,7 @@ export const GLM_4_6_2_FullPageHTML = `
 
 export const GLM_4_6_2_FullPageStyles = `
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
-        
+
         :root {
             --bg-black: #0a0a0a;
             --neon-magenta: #ff00ff;
@@ -648,20 +648,20 @@ export const GLM_4_6_2_FullPageStyles = `
             --neon-green: #00ff41;
             --neon-red: #ff0040;
         }
-        
+
         body {
             font-family: 'Orbitron', monospace;
             background-color: var(--bg-black);
             color: var(--neon-cyan);
             overflow-x: hidden;
         }
-        
+
         /* CRT Effect */
         .crt-container {
             position: relative;
             overflow: hidden;
         }
-        
+
         .crt-container::before {
             content: " ";
             display: block;
@@ -675,7 +675,7 @@ export const GLM_4_6_2_FullPageStyles = `
             background-size: 100% 2px, 3px 100%;
             pointer-events: none;
         }
-        
+
         .crt-container::after {
             content: " ";
             display: block;
@@ -690,7 +690,7 @@ export const GLM_4_6_2_FullPageStyles = `
             pointer-events: none;
             animation: flicker 0.15s infinite;
         }
-        
+
         @keyframes flicker {
             0% { opacity: 0.27861; }
             5% { opacity: 0.34769; }
@@ -714,78 +714,78 @@ export const GLM_4_6_2_FullPageStyles = `
             95% { opacity: 0.36108; }
             100% { opacity: 0.24387; }
         }
-        
+
         /* Neon Glow Effect */
         .neon-glow {
             text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
         }
-        
+
         .neon-border {
             box-shadow: 0 0 5px var(--neon-cyan), 0 0 10px var(--neon-cyan), inset 0 0 5px var(--neon-cyan);
         }
-        
+
         .neon-border-magenta {
             box-shadow: 0 0 5px var(--neon-magenta), 0 0 10px var(--neon-magenta), inset 0 0 5px var(--neon-magenta);
         }
-        
+
         .neon-border-yellow {
             box-shadow: 0 0 5px var(--neon-yellow), 0 0 10px var(--neon-yellow), inset 0 0 5px var(--neon-yellow);
         }
-        
+
         .neon-border-green {
             box-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green), inset 0 0 5px var(--neon-green);
         }
-        
+
         .neon-border-red {
             box-shadow: 0 0 5px var(--neon-red), 0 0 10px var(--neon-red), inset 0 0 5px var(--neon-red);
         }
-        
+
         /* Loading Animation */
         .loading-dots span {
             animation: blink 1.4s infinite both;
         }
-        
+
         .loading-dots span:nth-child(2) {
             animation-delay: 0.2s;
         }
-        
+
         .loading-dots span:nth-child(3) {
             animation-delay: 0.4s;
         }
-        
+
         @keyframes blink {
             0%, 60%, 100% { opacity: 0.2; }
             20% { opacity: 1; }
         }
-        
+
         /* Progress Bar Animation */
         .progress-bar {
             background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
             animation: progress-animation 3s ease-in-out infinite;
         }
-        
+
         @keyframes progress-animation {
             0% { width: 0%; }
             50% { width: 75%; }
             100% { width: 100%; }
         }
-        
+
         /* Notification Animation */
         .notification {
             animation: slide-in 0.5s ease-out;
         }
-        
+
         @keyframes slide-in {
             from { transform: translateX(100%); }
             to { transform: translateX(0); }
         }
-        
+
         /* Timeline Animation */
         .timeline-item {
             position: relative;
             padding-left: 40px;
         }
-        
+
         .timeline-item::before {
             content: '';
             position: absolute;
@@ -795,7 +795,7 @@ export const GLM_4_6_2_FullPageStyles = `
             width: 2px;
             background: var(--neon-cyan);
         }
-        
+
         .timeline-dot {
             position: absolute;
             left: 0;
@@ -806,19 +806,19 @@ export const GLM_4_6_2_FullPageStyles = `
             background: var(--bg-black);
             border: 2px solid var(--neon-cyan);
         }
-        
+
         /* Data Table Hover Effect */
         .data-table tr:hover {
             background-color: rgba(0, 255, 255, 0.1);
         }
-        
+
         /* Button Effects */
         .btn-arcade {
             position: relative;
             overflow: hidden;
             transition: all 0.3s;
         }
-        
+
         .btn-arcade::before {
             content: '';
             position: absolute;
@@ -829,39 +829,39 @@ export const GLM_4_6_2_FullPageStyles = `
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: left 0.5s;
         }
-        
+
         .btn-arcade:hover::before {
             left: 100%;
         }
-        
+
         /* Form Input Effects */
         .form-input {
             background-color: rgba(10, 10, 10, 0.7);
             border: 1px solid var(--neon-cyan);
             transition: all 0.3s;
         }
-        
+
         .form-input:focus {
             box-shadow: 0 0 10px var(--neon-cyan);
             outline: none;
         }
-        
+
         /* Card Hover Effect */
         .arcade-card {
             transition: all 0.3s;
         }
-        
+
         .arcade-card:hover {
             transform: translateY(-5px);
         }
-        
+
         /* Chart Container */
         .chart-container {
             position: relative;
             height: 200px;
             width: 100%;
         }
-        
+
         .chart-bar {
             position: absolute;
             bottom: 0;
